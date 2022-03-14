@@ -14,12 +14,14 @@ or
 ```
 git init .
 git config core.sparsecheckout true
-vi .git/info/sparse-checkout
+cat << EOF > .git/info/sparse-checkout
 
 /Node.js/*
 /Node.js/Linux
 !/Node.js/Windows
 !/Node.js/Mac
+
+EOF
 
 git remote add origin XXXX
 git pull origin master
