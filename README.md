@@ -9,6 +9,25 @@ git clone https://github.com/misogihagi/portable-selenium.git
 cd Node.js/Linux
 ```
 
+or
+
+```
+git init .
+git config core.sparsecheckout true
+vi .git/info/sparse-checkout
+
+/Node.js/*
+/Node.js/Linux
+!/Node.js/Windows
+!/Node.js/Mac
+
+git remote add origin XXXX
+git pull origin master
+
+```
+
+
+
 2 fetch runtime
 ```
 sh install.sh
